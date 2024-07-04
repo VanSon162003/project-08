@@ -5,7 +5,10 @@
     align-items: center;
     @include ab.breakpoint(lg) {
         gap: 10px;
-        margin-left: 39px;
+        margin-left: 40px;
+    }
+    @include ab.breakpoint(sm) {
+        margin-left: 0;
     }
 
     &__title {
