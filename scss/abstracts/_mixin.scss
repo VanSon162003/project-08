@@ -15,6 +15,4 @@ $grid-breakpoints: (
     } @else {
         @error "The value #{$key} is not in breakpoint list.";
     }
-
-    @debug $breakpoint;
 }

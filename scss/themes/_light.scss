@@ -12,5 +12,19 @@ html {
     --body-bg: #f6f6f6;
     @include ab.breakpoint(lg) {
         --header-bg-color: #fff;
+        --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
+
+    // Dropdown
+
+    --dropdown-bg-color: #fff;
+    --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+    --top-menu-border-color: #d2d1d6;
+    --top-menu-link-color-hover: #0071dc;
+
+    // side bar
+    --sidebar-bg-color: #fff;
+    --sidebar-shadow-color: rgba(200, 200, 200, 0.4);
+
+    --nav-btn-color: #1a162e;
 }

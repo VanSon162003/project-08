@@ -5,9 +5,8 @@
     align-items: center;
     @include ab.breakpoint(lg) {
         gap: 10px;
-        margin-left: 40px;
     }
-    @include ab.breakpoint(sm) {
+    @include ab.breakpoint(md) {
         margin-left: 0;
     }
 

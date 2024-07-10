@@ -1,0 +1,175 @@
+@use "../abstracts/" as ab;
+.dropdown {
+    position: absolute;
+    left: 0;
+    width: min(1240px, 100%);
+    padding-top: 54px;
+    display: none;
+    @include ab.breakpoint(lg) {
+        // height: 2105px;
+        position: initial;
+        padding-top: 0;
+
+        // overflow: auto;
+    }
+
+    &__inner {
+        position: relative;
+
+        height: min(582px, 100vh - 158px);
+        padding: 30px;
+        border-radius: 20px;
+        background: var(--dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+
+        &::before {
+            position: absolute;
+            top: -13px;
+            left: var(--arrow-left-pos);
+            translate: -50% 0;
+            content: url("../icons/dropdown-arrow.svg");
+            filter: var(--dropdown-color);
+        }
+
+        @include ab.breakpoint(lg) {
+            padding: 0;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            height: 100%;
+            &::before {
+                content: none;
+            }
+        }
+    }
+}
+
+.top-menu {
+    --main-column-width: 292px;
+    height: 100%;
+    position: relative;
+    &__main {
+        height: 100%;
+        width: var(--main-column-width);
+        border-right: 1px solid var(--top-menu-border-color);
+        overflow: auto;
+
+        @include ab.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
+    }
+
+    &-column {
+        display: flex;
+        gap: 14px;
+
+        &__icon {
+            position: relative;
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+
+            &-1 {
+                width: 30px;
+                height: 30px;
+                object-fit: contain;
+            }
+
+            &-2 {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 24px;
+                height: 24px;
+                object-fit: contain;
+                filter: var(--menu-item-icon-color);
+            }
+        }
+
+        &__content {
+            flex: 1;
+        }
+    }
+
+    &-column__content--heading {
+        margin-top: 4px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%; /* 150% */
+        color: var(--top-menu-link-color);
+
+        @include ab.breakpoint(lg) {
+            margin-bottom: 26px;
+        }
+    }
+
+    &-column__content--list {
+        margin-top: 19px;
+
+        @include ab.breakpoint(lg) {
+            margin-top: 0;
+        }
+    }
+
+    &-column__content--link {
+        display: block;
+        padding: 7px 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--top-menu-link-color);
+        line-height: 1.42; /* 142.857% */
+    }
+
+    &-column__item--active .sub-menu {
+        display: flex;
+    }
+    &-column__item--active > &-column__content--link,
+    &-column__item:hover > &-column__content--link {
+        font-weight: 500;
+        color: var(--top-menu-link-color-hover);
+    }
+}
+
+.sub-menu {
+    display: none;
+    justify-content: space-between;
+    position: absolute;
+    inset: 0 0 0 var(--main-column-width);
+    padding-left: 30px;
+    overflow-y: auto;
+
+    @include ab.breakpoint(lg) {
+        position: initial;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    &-column .top-menu-column {
+        margin-top: 22px;
+    }
+
+    &-column .top-menu-column:first-of-type {
+        margin-top: 0;
+        @include ab.breakpoint(lg) {
+            margin-top: 22px;
+        }
+    }
+
+    &-column .top-menu-column img {
+        @include ab.breakpoint(xl) {
+            display: none;
+        }
+        @include ab.breakpoint(lg) {
+            display: block;
+        }
+    }
+
+    &-list {
+        display: flex;
+        position: initial;
+        padding-left: 0;
+        height: 100%;
+    }
+}
