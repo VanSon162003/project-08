@@ -1,0 +1,16 @@
+@use "../abstracts/" as ab;
+.home {
+    &__container {
+        margin-top: 40px;
+        @include ab.screen(md) {
+            margin-top: 30px;
+        }
+    }
+
+    &__heading {
+        color: var(--home-heading-color);
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.45; /* 145.455% */
+    }
+}

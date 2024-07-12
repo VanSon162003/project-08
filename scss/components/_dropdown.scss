@@ -5,7 +5,7 @@
     width: min(1240px, 100%);
     padding-top: 54px;
     display: none;
-    @include ab.breakpoint(lg) {
+    @include ab.screen(lg) {
         // height: 2105px;
         position: initial;
         padding-top: 0;
@@ -31,7 +31,7 @@
             filter: var(--dropdown-color);
         }
 
-        @include ab.breakpoint(lg) {
+        @include ab.screen(lg) {
             padding: 0;
             border-radius: 0;
             background: transparent;
@@ -54,7 +54,7 @@
         border-right: 1px solid var(--top-menu-border-color);
         overflow: auto;
 
-        @include ab.breakpoint(lg) {
+        @include ab.screen(lg) {
             width: 100%;
             height: auto;
             border-right: none;
@@ -100,7 +100,7 @@
         line-height: 150%; /* 150% */
         color: var(--top-menu-link-color);
 
-        @include ab.breakpoint(lg) {
+        @include ab.screen(lg) {
             margin-bottom: 26px;
         }
     }
@@ -108,7 +108,7 @@
     &-column__content--list {
         margin-top: 19px;
 
-        @include ab.breakpoint(lg) {
+        @include ab.screen(lg) {
             margin-top: 0;
         }
     }
@@ -140,7 +140,7 @@
     padding-left: 30px;
     overflow-y: auto;
 
-    @include ab.breakpoint(lg) {
+    @include ab.screen(lg) {
         position: initial;
         flex-direction: column;
         padding-left: 0;
@@ -152,16 +152,16 @@
 
     &-column .top-menu-column:first-of-type {
         margin-top: 0;
-        @include ab.breakpoint(lg) {
+        @include ab.screen(lg) {
             margin-top: 22px;
         }
     }
 
     &-column .top-menu-column img {
-        @include ab.breakpoint(xl) {
+        @include ab.screen(xl) {
             display: none;
         }
-        @include ab.breakpoint(lg) {
+        @include ab.screen(lg) {
             display: block;
         }
     }

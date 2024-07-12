@@ -10,7 +10,7 @@ html {
     --top-acr-group-separate: #ededf6;
 
     --body-bg: #f6f6f6;
-    @include ab.breakpoint(lg) {
+    @include ab.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
@@ -27,4 +27,26 @@ html {
     --sidebar-shadow-color: rgba(200, 200, 200, 0.4);
 
     --nav-btn-color: #1a162e;
+
+    // category
+    --home-heading-color: #000;
+    --cate-item-bg: #eee;
+    --cate-desc-color: #1a162e;
+    --cate-item-img-bg: #fff;
+
+    // product
+    --product-shadow-color: rgba(237, 237, 246, 0.2);
+    --product-item-color: #fff;
+
+    // btn
+    --btn-color: #1a162e;
+
+    // filter form
+    --filter-form-bg: #fff;
+    --filter-form-drop-shadow: rgba(200, 200, 200, 0.4);
+
+    --filter-form-slider: #d2d1d6;
+    --filter-form-input: #d2d1d6;
+    --filter-form-btn-color: #9e9da8;
+    --filter-form-btn-bg: #f8f8fb;
 }

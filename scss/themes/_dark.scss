@@ -11,7 +11,7 @@ html.dark {
 
     --body-bg: #292e39;
 
-    @include ab.breakpoint(lg) {
+    @include ab.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
 
@@ -39,4 +39,16 @@ html.dark {
         contrast(82%);
 
     --nav-btn-color: #b9babe;
+
+    // category
+    --home-heading-color: #fff;
+    --cate-item-bg: #171c28;
+    --cate-desc-color: #fff;
+    --cate-item-img-bg: #292e39;
+
+    // product
+    --product-shadow-color: rgba(0, 0, 0, 0.2);
+    --product-item-color: #171c28;
+    // btn
+    --btn-color: #fff;
 }
