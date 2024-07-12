@@ -1,18 +1,45 @@
+// buttons
+
 .btn {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 6px 12px;
+    justify-content: center;
+    height: 46px;
+    padding: 0 20px;
+    background: #f8f8fb;
+    font-size: 1.8rem;
+    font-weight: 500;
     border-radius: 6px;
-    background: #fff;
-
-    &-title {
-        color: #6c6c72;
-        font-size: 1.4rem;
-        font-weight: 700;
-        line-height: 1.42; /* 142.857% */
+    user-select: none;
+    + .btn {
+        margin-left: 20px;
     }
-    &-img {
-        color: var(--btn-color);
+
+    &--text {
+        color: #9e9da8;
+        font-weight: 400;
+        background: transparent;
+    }
+
+    &--disable {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &--primary {
+        background: #ffb700;
+        color: #1a162e;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 1px solid #d2d1d6;
+    }
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &:hover {
+        opacity: 0.9;
     }
 }

@@ -193,16 +193,29 @@
                 <div class="product-top">
                     <h2 class="home__heading">Total LavAzza 1320</h2>
                     <div class="filter-wrap">
-                        <a href="#!" class="btn">
-                            <span class="btn-title">Filter</span>
+                        <label for="filter" class="filter-btn">
+                            <span class="filter-btn-title">Filter</span>
                             <img
                                 src="./asset/icons/product-icon-btn.svg"
                                 alt=""
-                                class="btn-img"
+                                class="filter-btn-img"
                             />
-                        </a>
+                        </label>
+
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="filter"
+                            class="form-input__checkbox"
+                            hidden
+                        />
 
                         <div class="filter">
+                            <img
+                                src="./asset/icons/arrow-up.png"
+                                alt=""
+                                class="filter__arrow"
+                            />
                             <h3 class="filter__heading">Filter</h3>
                             <form action="" class="filter__form">
                                 <div class="filter__row">
@@ -321,7 +334,7 @@
                                                     ><img
                                                         src="./asset/icons/search.svg"
                                                         alt=""
-                                                        class="filter-brand__search"
+                                                        class="icon filter-brand__search"
                                                 /></a>
                                             </div>
 
@@ -348,10 +361,8 @@
                             </form>
 
                             <div class="filter-bottom">
-                                <a href="#!" class="filter-bottom__btn--back"
-                                    >Cancel</a
-                                >
-                                <a href="#!" class="filter-bottom__btn"
+                                <a href="#!" class="btn btn--text">Cancel</a>
+                                <a href="#!" class="btn btn--primary"
                                     >Show Result</a
                                 >
                             </div>

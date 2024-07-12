@@ -1,3 +1,4 @@
+@use "../abstracts/" as ab;
 .cate-item {
     align-items: center;
     gap: 20px;
@@ -30,11 +31,22 @@
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1.45; /* 145.455% */
+
+        @include ab.screen(xl) {
+            font-size: 1.8rem;
+            line-height: 1.44; /* 144.444% */
+        }
     }
 
     &__desc {
         margin-top: 6px;
         font-size: 1.6rem;
         line-height: 1.5; /* 150% */
+
+        @include ab.screen(xl) {
+            width: 185px;
+            font-size: 1.4rem;
+            line-height: 1.42; /* 142.857% */
+        }
     }
 }

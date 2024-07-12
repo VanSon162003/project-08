@@ -12,5 +12,11 @@
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1.45; /* 145.455% */
+
+        @include ab.screen(xl) {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.44; /* 144.444% */
+        }
     }
 }
