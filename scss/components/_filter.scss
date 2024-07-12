@@ -23,8 +23,6 @@
 }
 
 .filter {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     right: 0;
     top: 55px;
@@ -33,7 +31,12 @@
     // width: 100%;
     background: var(--filter-form-bg);
     filter: drop-shadow(0px 40px 90px var(--filter-form-drop-shadow));
-    transition: 0.1s;
+    transition: 0.2s;
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
     &__form {
         @include ab.screen(xl) {
             height: 530px;
@@ -123,11 +126,6 @@
             line-height: 1.46;
         }
     }
-}
-
-.form-input__checkbox:checked ~ .filter {
-    opacity: 1;
-    visibility: visible;
 }
 
 .filter__col--slider {

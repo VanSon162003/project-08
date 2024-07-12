@@ -1,0 +1,57 @@
+@use "../abstracts/" as ab;
+.footer {
+    margin-top: 70px;
+    padding: 50px 0;
+    background: var(--footer-bg);
+
+    &-desc {
+        margin-top: 20px;
+        width: 70%;
+
+        font-size: 1.6rem;
+        line-height: 1.5; /* 150% */
+
+        @include ab.screen(xl) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &-icon {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    &-title {
+        margin-bottom: 10px;
+        color: var(--footer-title);
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.45; /* 145.455% */
+    }
+
+    &-link {
+        margin-top: 10px;
+        display: inline-block;
+        color: var(--footer-title);
+        font-size: 1.6rem;
+        line-height: 1.42; /* 142.857% */
+
+        &:hover {
+            color: #0071dc;
+        }
+    }
+
+    &-item__list {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    &-link--btn {
+        @extend .footer-link;
+    }
+}
+
+.desc-bottom {
+    margin-top: 50px;
+}

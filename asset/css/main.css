@@ -1336,6 +1336,8 @@ html.dark {
   --filter-form-btn-bg: #171c28;
   --filter-form-icon: brightness(0) saturate(100%) invert(100%) sepia(86%)
       saturate(403%) hue-rotate(181deg) brightness(88%) contrast(91%);
+  --footer-bg: #171c28;
+  --footer-title: #fff;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1374,6 +1376,9 @@ html {
   --filter-form-input: #d2d1d6;
   --filter-form-btn-color: #9e9da8;
   --filter-form-btn-bg: #f8f8fb;
+  --footer-bg: #fff;
+  --footer-title: #1a162e;
+  --footer-desc: #9e9da8;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1583,6 +1588,52 @@ html {
 }
 .navbar-btn__icon {
   filter: var(--sidebar--icon-dark-color);
+}
+
+.footer {
+  margin-top: 70px;
+  padding: 50px 0;
+  background: var(--footer-bg);
+}
+.footer-desc {
+  margin-top: 20px;
+  width: 70%;
+  font-size: 1.6rem;
+  line-height: 1.5; /* 150% */
+}
+@media (max-width: 1199.98px) {
+  .footer-desc {
+    font-size: 1.4rem;
+  }
+}
+.footer-icon {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.footer-title {
+  margin-bottom: 10px;
+  color: var(--footer-title);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.45; /* 145.455% */
+}
+.footer-link, .footer-link--btn {
+  margin-top: 10px;
+  display: inline-block;
+  color: var(--footer-title);
+  font-size: 1.6rem;
+  line-height: 1.42; /* 142.857% */
+}
+.footer-link:hover, .footer-link--btn:hover {
+  color: #0071dc;
+}
+.footer-item__list {
+  display: inline-block;
+  margin-top: 10px;
+}
+.desc-bottom {
+  margin-top: 50px;
 }
 
 .logo {
@@ -2043,8 +2094,6 @@ html {
 }
 
 .filter {
-  opacity: 0;
-  visibility: hidden;
   position: absolute;
   right: 0;
   top: 55px;
@@ -2052,7 +2101,11 @@ html {
   border-radius: 20px;
   background: var(--filter-form-bg);
   filter: drop-shadow(0px 40px 90px var(--filter-form-drop-shadow));
-  transition: 0.1s;
+  transition: 0.2s;
+}
+.filter.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 @media (max-width: 1199.98px) {
   .filter__form {
@@ -2133,11 +2186,6 @@ html {
     font-size: 1.5rem;
     line-height: 1.46;
   }
-}
-
-.form-input__checkbox:checked ~ .filter {
-  opacity: 1;
-  visibility: visible;
 }
 
 .filter__col--slider {
