@@ -12,7 +12,7 @@ $display-value: block, flex, grid, none;
     $infix: if($breakpoint, "-#{$breakpoint}", "");
     @each $display in $display-value {
         .d#{$infix}-#{$display} {
-            display: $display;
+            display: $display !important;
         }
     }
 }
